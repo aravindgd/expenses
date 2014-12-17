@@ -14,6 +14,7 @@ gem 'devise'
 gem 'pg'
 gem 'simple_form'
 gem 'thin'
+gem 'will_paginate', '~> 3.0.6'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

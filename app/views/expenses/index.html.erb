@@ -1,0 +1,29 @@
+<h1>Listing expenses</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product name</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Created by</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenses.each do |expense| %>
+      <tr>
+        <td><%= expense.product_name %></td>
+        <td><%= expense.date %></td>
+        <td><%= expense.amount %></td>
+        <td><%= expense.user.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+  <%= will_paginate @posts %>
+<br>
+
+<%= link_to 'New Expense', new_expense_path,:class=>"btn btn-default" %>
+<%= link_to 'My Expense', my_expanse_index_path,:class=>"btn btn-default" %>
